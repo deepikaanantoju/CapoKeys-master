@@ -1,0 +1,54 @@
+<div class="jumbotron jumbotron-header vertical-center-row">
+    <h2>Please enter the capo keys and the fret value</h2>
+    <p>All the keys are between the below 12 keys and Fret value between 1 and 7</p>
+</div>
+<br>
+
+<div class="jumbotron">
+    <div class="" data-ng-init="getJson()">
+        <div class="container search-format">
+            <b>Capo Keys : </b>
+            <label ng-repeat="capo in capoKeysList">
+                <button class="btn btn-primary" ng-click="addToCapoList(capo)">{{ capo }}</button>
+            </label>
+        </div>
+        <div class="container search-format">
+            <b>Fret Value : </b>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Fret Number</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="fret in fretValues"
+                        ng-click="setFretValue(fret)">
+                        <a href="">{{fret}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <fieldset class="featured-header">
+        <legend>OR</legend>
+    </fieldset>
+
+    <div class="container vertical-center-row">
+        <form>
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" placeholder="Capo Keys" ng-model='userEnteredCapoList'>
+                </div>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" placeholder="Fret Value" ng-model='userEnteredFretValue'>
+                </div>
+                <div class="col-xs-1">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" role="search" ng-click="processConversion()"> Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

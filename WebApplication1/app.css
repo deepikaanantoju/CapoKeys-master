@@ -1,0 +1,71 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+  text-align:center;
+  padding:30px;
+  width:30%;
+  margin:auto;
+
+}
+
+.glyphicon-search {
+  font-size: 30px;
+  color: floralwhite;
+
+}
+
+.jumbotron-header {
+  background-color: #f7e1b5;
+  color: #0f0f0f;
+}
+
+.search-format {
+  padding : 10px;
+  text-align: left;
+  color:black;
+}
+
+.featured-header{
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+.featured-header legend{
+  -webkit-padding-start: 8px; /* It sets the whitespace between the line and the text */
+  -webkit-padding-end: 8px;
+  background: transparent; /** It's cool because you don't need to fill your bg-color as you would need to in some of the other examples that you can find (: */
+  font-weight: normal; /* I preffer the text to be regular instead of bold  */
+}
+
+.result {
+  color: black;
+}
+

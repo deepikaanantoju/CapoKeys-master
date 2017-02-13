@@ -1,0 +1,7 @@
+1) UI - text box to accept text string and capo value and allow user to submit the values
+
+display the converted string in the UI
+
+Also - UI should also contain chromatic scale
+
+- validation to include the entered string is within the chromatic scale
